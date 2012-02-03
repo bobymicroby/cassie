@@ -5,7 +5,8 @@ Cassie is a small, lightweight Cassandra client built on
 [Finagle](http://github.com/twitter/finagle) with with all that provides plus column name/value
 encoding and decoding.
 
-It is heavily used in production at Twitter so such be considered stable, yet it is incomplete in that it doesn't support the full feature set of Cassandra and will continue to evolve.
+It is heavily used in production at Twitter so such be considered stable. However it's incomplete in that it doesn't support 
+the full feature set of Cassandra.
 
 Requirements
 ------------
@@ -234,7 +235,7 @@ systems. Parallel and Distributed Algorithms (1989) pp. 215–226* for a more th
 
 
 
-Things What Ain't Done Yet
+TODO
 ==========================
 
 * Authentication
@@ -253,6 +254,6 @@ License
 -------
 
 Copyright (c) 2010 Coda Hale
-Copyright (c) 2011-2012 Twitter, Inc.
+Copyright (c) 2012 Twitter, Inc.
 
-Published under The Apache 2.0 License, see LICENSE.
+Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
