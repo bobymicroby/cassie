@@ -3,10 +3,10 @@ Cassie
 
 Cassie is a small, lightweight Cassandra client built on
 [Finagle](http://github.com/twitter/finagle) with with all that provides plus column name/value
-encoding and decoding.
-
-It is heavily used in production at Twitter so such be considered stable. However it's incomplete in that it doesn't support 
+encoding and decoding. It is heavily used in production at Twitter so such be considered stable. However it's incomplete in that it doesn't support 
 the full feature set of Cassandra.
+
+For questions or technical discussions, please use our [mailing list](http://groups.google.com/group/twitter-cassie).
 
 Requirements
 ------------
