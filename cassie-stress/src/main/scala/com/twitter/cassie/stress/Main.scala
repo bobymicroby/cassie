@@ -11,18 +11,17 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+package com.twitter.cassie.stress
 
-package com.twitter.cassie.util
+object Main {
+  def main(args: Array[String]) {
 
-import com.twitter.util.Future
-import com.twitter.finagle.stats.StatsReceiver
-
-object FutureUtil {
-  private val errPrefix = "errors_%s_%s"
-
-  def timeFutureWithFailures[T](stats: StatsReceiver, name: String)(f: => Future[T]): Future[T] = {
-    stats.timeFuture(name)(f).onFailure { throwable =>
-      stats.counter(errPrefix.format(name, throwable.getClass.getSimpleName)).incr()
+    val stresser = args.toList match {
+      case "-batchCounters" :: tail => new CounterBatchMutationBuilderStresser()
+      case "-batch" :: tail => new BatchMutationBuilderStresser()
+      case _ => new BatchMutationBuilderStresser()
     }
+
+    stresser.run(10)
   }
 }
